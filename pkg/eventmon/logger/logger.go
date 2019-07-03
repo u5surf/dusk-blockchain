@@ -88,13 +88,16 @@ func (l *LogProcessor) Process(buf *bytes.Buffer) (*bytes.Buffer, error) {
 		return nil, err
 	}
 
-	aggro, err := ioutil.ReadAll(r)
+	evt, err := ioutil.ReadAll(r)
 	if err != nil {
 		return nil, err
 	}
 
-	if topic == topics.Agreement {
-		go l.PublishRoundEvent(aggro)
+	switch topic {
+	case topics.Agreement:
+		go l.PublishRoundEvent(evt)
+	case topics.Candidate:
+		go l.PublishCandidateEvent(evt)
 	}
 
 	return &newBuf, nil

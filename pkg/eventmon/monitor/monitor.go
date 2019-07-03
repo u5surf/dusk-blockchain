@@ -56,7 +56,7 @@ type unixSupervisor struct {
 
 func (m *unixSupervisor) Levels() []log.Level {
 	return []log.Level{
-		// log.WarnLevel,
+		log.WarnLevel,
 		log.ErrorLevel,
 		log.FatalLevel,
 		log.PanicLevel,
@@ -65,7 +65,7 @@ func (m *unixSupervisor) Levels() []log.Level {
 
 func (m *unixSupervisor) Fire(entry *log.Entry) error {
 	if m.activeProc {
-		return m.processor.Send(entry)
+		return m.processor.Send(entry.WithField("code", "warn"))
 	}
 	return nil
 }

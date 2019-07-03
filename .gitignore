@@ -26,3 +26,9 @@
 *MANIFEST*
 *0000*
 demo/**.*
+
+# git patch
+*.patch
+
+# benchmark byproducts
+*.pprof

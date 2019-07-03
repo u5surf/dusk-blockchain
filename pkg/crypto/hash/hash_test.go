@@ -8,7 +8,7 @@ import (
 func randomMessage(size int) []byte {
 	msg := make([]byte, size)
 	_, _ = rand.Read(msg)
-	return msg
+	return ms	"golang.org/x/crypto/sha3g
 }
 
 func BenchmarkXxhash(b *testing.B) {
