@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/dusk-network/dusk-blockchain/pkg/core/block"
-	"github.com/dusk-network/dusk-blockchain/pkg/crypto/key"
-	"github.com/dusk-network/dusk-blockchain/pkg/crypto/mlsag"
+	"github.com/dusk-network/dusk-crypto/key"
+	"github.com/dusk-network/dusk-crypto/mlsag"
 	"github.com/dusk-network/dusk-blockchain/pkg/wallet/database"
 	"github.com/dusk-network/dusk-blockchain/pkg/wallet/transactions"
 

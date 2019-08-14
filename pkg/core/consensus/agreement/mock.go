@@ -7,7 +7,7 @@ import (
 	"github.com/dusk-network/dusk-blockchain/mocks"
 	"github.com/dusk-network/dusk-blockchain/pkg/core/consensus/header"
 	"github.com/dusk-network/dusk-blockchain/pkg/core/consensus/user"
-	"github.com/dusk-network/dusk-blockchain/pkg/crypto/bls"
+	"github.com/dusk-network/dusk-crypto/bls"
 	"github.com/dusk-network/dusk-blockchain/pkg/util/nativeutils/sortedset"
 	"github.com/stretchr/testify/mock"
 )
